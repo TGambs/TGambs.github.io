@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PearCare.Inc</title>
-    <link rel="stylesheet" href="../company site/css/companyPage.css" />
+    <link rel="stylesheet" href="companyPage.css" />
   </head>
 
   <body style="background-color: #ecefe7">
     <div class="navBarDiv">
-      <a href="C_home.html"><h3>Home</h3></a>
-      <a href="C_products.html"><h3>Our Products</h3></a>
+      <a href="index.html"><h3>Home</h3></a>
+      <a href="products.html"><h3>Our Products</h3></a>
       <h11> PearCare Inc.</h11>
-      <a href="C_about.html"><h3>About Us</h3></a>
-      <a href="C_contact.html" id="activeLink"><h3>Contact Us</h3></a>
-      <img src="../images/logo/logo_pearCare.png" id="pClogo" />
+      <a href="about.html"><h3>About Us</h3></a>
+      <a href="contact.html" id="activeLink"><h3>Contact Us</h3></a>
+      <img src="../images/logo_pearCare.png" id="pClogo" />
     </div>
 
     <div class="infoCont">
       <div class="contactForm" style="display: block">
         <!--Doesnt need to actually work however if it looks like it should then it should-->
-        <h4>
-          Please contact us here regarding our products or any way we may be
-          able to help you:<br /><br />
+        <h4 style="padding: 5px; margin: 5px" id="cMessage">
+          Please contact us here regarding our products or any future
+          collaberations:<br /><br />
         </h4>
 
-        <form action="">
-          <label for="uName">Your name:</label>
+        <form id="cForm">
+          <label for="uName">Your name:</label><br />
           <input
             type="text"
             id="uName"
@@ -34,7 +34,7 @@
             placeholder="Your name..."
           /><br /><br />
 
-          <label for="uEmail">Email contact:</label>
+          <label for="uEmail">Email contact:</label><br />
           <input
             type="text"
             id="uEmail"
@@ -42,7 +42,7 @@
             placeholder="Your email contact..."
           /><br /><br />
 
-          <label for="company">Your company:</label>
+          <label for="company">Company name:</label><br />
           <input
             type="text"
             id="company"
@@ -50,14 +50,20 @@
             placeholder="Your company..."
           /><br /><br />
 
-          <label for="productCh">Product you are enquiring about:</label>
+          <label for="productCh">Product you are enquiring about:</label><br />
           <select id="productCh" name="productCh">
             <option value="no_choice">Please Select a product</option>
             <option value="eat">E.A.T</option></select
           ><br /><br />
 
-          <input type="submit" value="Submit" />
+          <div style="display: flex; justify-content: center">
+            <input type="submit" value="Submit" class="GButton" />
+          </div>
         </form>
+
+        <div id="ty-message" style="display: none">
+          <h3>Thank you for your message, we will get back to you shortly</h3>
+        </div>
       </div>
     </div>
   </body>
@@ -65,4 +71,20 @@
   <footer>
     <h4>Created by the PearCare Inc. Team</h4>
   </footer>
+
+  <script>
+    document
+      .getElementById("cForm")
+      .addEventListener("submit", function (event) {
+        // Stops an empty form beng submitted
+        event.preventDefault();
+
+        // Hide the form
+        this.style.display = "none";
+        cMessage.style.display = "none";
+
+        // Show the thank you message
+        document.getElementById("ty-message").style.display = "block";
+      });
+  </script>
 </html>

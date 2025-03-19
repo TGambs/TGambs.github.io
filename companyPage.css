@@ -264,6 +264,25 @@ hTemp {
   font-family: "Kay Pho Du", sans-serif;
 }
 
+input[type="text"] {
+  width: 50%;
+  border: 3px #cccc;
+  border-radius: 3px;
+
+  padding: 5px;
+  margin: 4px;
+
+  resize: vertical;
+}
+
+select {
+  border: 3px #cccc;
+  border-radius: 3px;
+
+  padding: 5px;
+  margin: 4px;
+}
+
 footer {
   background-color: #827868;
 
