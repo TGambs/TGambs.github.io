@@ -226,7 +226,10 @@ hTemp {
 
   color: green;
   background-color: #c2fbd7;
-  border: 0;
+
+  border-width: 1px;
+  border-color: #4d4245;
+
   border-radius: 100px;
 
   font-size: 20px;
