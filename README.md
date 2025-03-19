@@ -1,2 +1,4 @@
 # TGambs.github.io
-Company page for E.A.T
+## This is the company page for the E.A.T product, made by the PearCare.Inc team.
+
+Please view it here: www.Tgambs.github.io/index.html
