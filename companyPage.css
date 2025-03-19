@@ -6,7 +6,8 @@
 /* Thinking of using the following colour scheme - https://coolors.co/827377-002035-22aed1-6d8ea0-70b77e */
 
 .navBarDiv {
-  background-color: #b3a99a;
+  /*bg b3a99a */
+  background-color: #c1b99f;
   display: flex;
   clear: both;
   height: 90px;
